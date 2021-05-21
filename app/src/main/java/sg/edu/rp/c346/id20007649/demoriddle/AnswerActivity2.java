@@ -17,10 +17,10 @@ public class AnswerActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer2);
 
-        tvAnswer2 = findViewById(R.id.textView2);
+        tvAnswer2 = findViewById(R.id.tvAnswer2);
 
         Intent intentReceived = getIntent();
-        String questionChoosen = intentReceived.getStringExtra("Question");
-        tvAnswer2.setText(questionChoosen + "answer is : Gone ");
+        String questionsSelected = intentReceived.getStringExtra("Question");
+        tvAnswer2.setText(questionsSelected + "answer is : Gone ");
     }
 }

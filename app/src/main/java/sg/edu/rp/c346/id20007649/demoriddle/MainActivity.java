@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d("MainActivity", "onCreate() called.");
-
 
         tvQ1 = findViewById(R.id.textViewQ1);
         btnRevealQ1 = findViewById(R.id.buttonRevealQ1);
@@ -39,9 +37,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, AnswerActivity1.class);
-                intent.putExtra("Question", "Q1");
-                intent.putExtra("Module Name", "Android");
+                Intent intent = new Intent(MainActivity.this, AnswerActivity.class);
+                intent.putExtra("Question 1 ", "Q1 ");
+                intent.putExtra("Answer"," answer is : Queue ");
+
+
                 startActivity(intent);
 
             }
@@ -52,48 +52,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, AnswerActivity2.class);
-                intent.putExtra("Question: ", "Q2");
+                Intent intent = new Intent(MainActivity.this, AnswerActivity.class);
+                intent.putExtra("Question 2", "Q2");
+                intent.putExtra("Answer", " answer is : Gone");
                 startActivity(intent);
 
             }
         });
     }
 
-    @Override
-    protected void onStart() {
-        Log.d("MainActivity", "onStart() called.");
-        super.onStart();
-    }
 
-    @Override
-    protected void onResume() {
-        Log.d("MainActivity", "onResume() called.");
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        Log.d("MainActivity", "onPause() called.");
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        Log.d("MainActivity", "onStop() called.");
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        Log.d("MainActivity", "onDestroy() called.");
-        super.onDestroy();
-
-    }
-
-    @Override
-    protected void onRestart() {
-        Log.d("MainActivity", "onRestart() called.");
-        super.onRestart();
-    }
 }
+

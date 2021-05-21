@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 public class AnswerActivity1 extends AppCompatActivity {
@@ -19,7 +18,7 @@ public class AnswerActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_answer1);
 
 
-        tvAnswer = findViewById(R.id.textView);
+        tvAnswer = findViewById(R.id.tvAnswer);
 
         // tvAnswer.setText("In answer activity 1");
 
